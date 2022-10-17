@@ -1,0 +1,6 @@
+npx hardhat run scripts/deploy-funding.js --network ropsten
+can verify only token contract if want to verify contract must to seperate verify 
+npx hardhat verify "0x980306e668Fa1E4246e2AC86e06e12B67A5fD087" "0xe59CA158a1bE96afb44691043dE0Bd92a724a696" "0x02777053d6764996e594c3E88AF1D58D5363a2e6" --network ropsten
+main contract 
+token 0xe59CA158a1bE96afb44691043dE0Bd92a724a696
+contract 0x980306e668Fa1E4246e2AC86e06e12B67A5fD087
