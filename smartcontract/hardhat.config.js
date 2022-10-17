@@ -37,4 +37,15 @@ module.exports = {
   etherscan: {
     apiKey: process.env.ETHERSCAN_API_KEY,
   },
+  // for test mock
+  solidity: {
+    version: "0.8.13",
+    settings: {
+      outputSelection: {
+        "*": {
+          "*": ["storageLayout"]
+        }
+      }
+    }
+  }
 };
