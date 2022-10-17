@@ -14,7 +14,6 @@
     "@nomiclabs/hardhat-etherscan": "^3.1.1",
     "@nomiclabs/hardhat-waffle": "^2.0.3",
     "chai": "^4.3.6",
-    "dotenv": "^16.0.3",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-standard": "^16.0.3",
@@ -32,7 +31,8 @@
     "solidity-coverage": "^0.7.22"
   },
   "dependencies": {
-    "@defi-wonderland/smock": "^2.3.0",
-    "@openzeppelin/contracts": "^4.7.3"
+    "@defi-wonderland/smock": "^2.0.7",
+    "@openzeppelin/contracts": "^4.7.3",
+    "dotenv": "^16.0.3"
   }
 }

@@ -163,6 +163,7 @@ describe("SmartFunding operation", function () {
         await tx.wait()
 
         // claim reward
+        await fundingContract.setVariable('fundingStage', 2);
         const tx2 = await fundingContract.connect(investor1).claim();
         await tx2.wait();
 
@@ -197,7 +198,7 @@ describe("SmartFunding operation", function () {
         await tx.wait()
 
         // refund
-        await fundingContract.setVariable('fundingStage', 2);
+        await fundingContract.setVariable('fundingStage', 3);
         const tx2 = await fundingContract.connect(investor1).refund();
         await tx2.wait();
 

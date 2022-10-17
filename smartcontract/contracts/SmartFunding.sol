@@ -3,7 +3,7 @@ pragma solidity ^0.8.12;
 
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
-
+// contract
 contract SmartFunding{
     // get address contract
     uint256 public fundingStage; // if 0 inactive | 1 active | 2 success | 3 fail

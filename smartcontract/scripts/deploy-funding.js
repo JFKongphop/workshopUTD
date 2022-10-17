@@ -24,6 +24,9 @@ async function main() {
     const SmartFundingContract = await ethers.getContractFactory("SmartFunding") 
     const fundingContract = await SmartFundingContract.deploy(tokenContract.address);
 
+    await fundingContract.deployTransaction.wait(5);
+    await fundingContract.deployed();
+
 
     console.log("JFKToken deployed to:", tokenContract.address);
     console.log("Greeter deployed to:", fundingContract.address);
@@ -31,7 +34,7 @@ async function main() {
     try{
         await hre.run("verify:verify", {
             address: tokenContract.address,
-            contract: "contract/JFKToken.sol:JFKToken"
+            contract: "contracts/JFKToken.sol:JFKToken"
         })
     }
     catch(err){
@@ -49,7 +52,7 @@ async function main() {
     catch(err){
         console.log(err);
     }
-}/
+}
 
 // We recommend this pattern to be able to use async/await everywhere
 // and properly handle errors.
